@@ -1,0 +1,29 @@
+.add {
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    background-color: var(--iconBGColor);
+}
+.add .form-label {
+    color: var(--themeBGColor) !important;
+    margin: 0.2rem 0 !important;
+    font-weight: 600 !important;
+}
+.text-danger p {
+    font-size: x-small;
+}
+/* .image-upload {
+    width: 100%;
+    border-radius: 20px;
+    border: 0.2rem solid var(--iconColor);
+}
+.image-upload img {
+    width: 10rem;
+}
+.image-upload input {
+    display: none;
+}
+.labelimg {
+    justify-content: center;
+    flex-direction: column;
+} */

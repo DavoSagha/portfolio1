@@ -1,0 +1,20 @@
+<div class="m-0 colum educacion">
+    <h3 class="d-flex justify-content-between">Educacion
+        <button class="edicion add" routerLink="/nueva-edu" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i></button>
+    </h3>
+    <div class="m-0 p-0" *ngFor="let Educacion of edu">
+        <div class="item edu">
+            <div class="editar d-flex justify-content-end" *ngIf="isLogged">
+                <button class="edicion" routerLink="/editar-edu/{{Educacion.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="edicion" (click)="Borrar(Educacion.id)"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>{{ Educacion.tituloEdu}}</h4>
+                <!-- <button type="button" class="certifi" data-bs-toggle="modal" data-bs-target="#certifi1Modal"><i class="fa-solid fa-address-card"></i></button> -->
+            </div>
+            <span class="casa">{{ Educacion.instiEdu }}</span>
+            <span class="fecha">{{ Educacion.fechaEdu }}</span>
+            <p class="m-0 p-0">{{ Educacion.descripcionEdu }}</p>
+        </div>
+    </div>
+</div>

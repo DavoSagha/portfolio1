@@ -1,0 +1,60 @@
+/* ----Navbar---- */
+nav {
+    width: 100%;
+    background-color: var(--headerBGColor);
+}
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.3rem;
+}
+.navbar-nav {
+align-items: center !important;
+justify-content: center !important;
+}
+.navbar-toggler {
+    border: none !important;
+    align-items: center !important;
+    color: #fff !important;
+    width: 2.6rem !important;
+    height: 2rem !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    background-color: var(--themeBGColor) !important;
+}
+/* -----logo AP----- */
+.navbar-brand i {
+display: inline-block;
+width: 2.6rem;
+height: 2.6rem;
+text-align: center;
+line-height: 2.5rem;
+border-radius: 50%;
+background-color: var(--iconBGColor);
+font-size: 1.25rem;
+transition: .3s;
+}
+.navbar-brand:hover i {
+    background-color: var(--themeBGColor);
+}
+nav .navbar-brand p {
+    margin: 0 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+/* -----menu navbar------ */
+.menu li a {
+    padding: 0.2rem 0.5rem !important;
+    letter-spacing: -0.04rem;
+    align-items: center;
+}
+.menu li a i {
+    padding-right: 0.3rem;
+    transition: .3s;
+}
+.menu li a:hover i {
+    color: var(--themeBGColor) !important;
+}
+.active i {
+    color: var(--themeBGColor);
+}

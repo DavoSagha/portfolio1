@@ -1,0 +1,51 @@
+
+<div class=" container d-flex justify-content-center mt-5" *ngIf="persona">
+    <div class="modal-dialog modal-dialog-centered edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-white">Editar Persona</h1>
+            </div>
+            <div class="modal-body">
+                <form class="add-edu" #f="ngForm" (ngSubmit)="Editar()" novalidate>
+                    <div class="image-upload d-sm-flex text-sm-start justify-content-center mt-2 mb-2 mx-sm-5 p-2">
+                        <img [src]="imgService.urlimg" alt="Perfil" class="perfil mx-sm-3" id="img" />
+                        <div class="d-sm-flex mt-1 mb-1 mx-sm-4 labelimg text-sm-start">
+                            <label for="foto">Foto
+                                <span class="btn btn-light w-100">Cambiar</span>
+                            </label>
+                            <input id="foto" name="foto" type="file" accept=".jpg, .png, .jpeg" [(ngModel)]="persona.imgPerfil" (change)="subirImg($event)"/>
+                        </div>
+                    </div>
+                    <label for="imgBaner" class="form-label">URL Banner</label>
+                    <input type="file" accept=".jpg, .png, .jpeg" (change)="subirImgB($event)" class="form-control" [class]="{'is-invalid': imgBanner.errors && (imgBanner.dirty || imgBanner.touched)}" id="imgBanner" name="imgBanner" [(ngModel)]="persona.imgBanner" required #imgBanner="ngModel" autocomplete="off">
+                    <div *ngIf="imgBanner.errors?.['required']" class="text-danger">
+                        <p class="m-0">La URL es obligatoria</p>
+                    </div>
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': nombre.errors && (nombre.dirty || nombre.touched)}" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required #nombre="ngModel" placeholder="Ej: Tomás" autocomplete="off">
+                        <div *ngIf="nombre.errors?.['required']" class="text-danger">
+                            <p class="m-0">El nombre es obligatorio</p>
+                        </div>
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': apellido.errors && (apellido.dirty || apellido. touched)}" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required #apellido="ngModel" placeholder="Ej: Caratti" autocomplete="off">
+                        <div *ngIf="apellido.errors?.['required']" class="text-danger">
+                            <p class="m-0">El apellido es obligatorio</p>
+                        </div>
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': titulo.errors && (titulo.dirty || titulo.touched)}" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required #titulo="ngModel" placeholder="Ej: Programador Web Full stack" autocomplete="off">
+                        <div *ngIf="titulo.errors?.['required']" class="text-danger">
+                            <p class="m-0">El título es obligatorio</p>
+                        </div>
+                    <label for="descripcion" class="form-label">Descripcion</label>
+                    <textarea name="descripcion" class="form-control" [class]="{'is-invalid': descripcion.errors && (descripcion.dirty || descripcion.touched)}" id="descripcion" cols="70" rows="3" [(ngModel)]="persona.descripcion" required #descripcion="ngModel" placeholder="Escriba aquí una descripcion suya..." autocomplete="off"></textarea>
+                        <div *ngIf="descripcion.errors?.['required']" class="text-danger">
+                            <p class="m-0">La descripcion es obligatoria</p>
+                        </div>
+                    <div class="modal-footer d-flex justify-content-center mt-4">
+                        <button class="btn btn-primary" [disabled]="!f.form.valid">Aceptar <!--<i class="fa-solid fa-circle-check icon-p"></i>--></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

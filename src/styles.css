@@ -1,0 +1,92 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Global Variables */
+:root {
+    --themeBGColor:#02967d;
+    --iconColor:#fff;
+    --iconBGColor: #252a2e;
+    --headerBGColor:#000911;
+    --BGColor:#010e1a;
+    --bg-btn-primary:#09182c;
+    --bg-btn-active:#1b3f74;
+}
+
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000;
+}
+body::-webkit-scrollbar-thumb {
+    width: 1x;
+    background-color: var(--bg-btn-primary);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--themeBGColor);
+}
+
+/* ----body---- */
+body {
+    background-color: var(--BGColor) !important;
+}
+
+/* ----botón---- */
+.btn-primary {
+    --bs-btn-bg: var(--bg-btn-primary) !important;
+    --bs-btn-border-color:var(--bg-btn-primary) !important;
+    --bs-btn-hover-bg: var(--themeBGColor) !important;
+    --bs-btn-hover-border-color:var(--themeBGColor) !important;
+    --bs-btn-active-bg: var(--bg-btn-active) !important;
+    --bs-btn-active-border-color: var(--bg-btn-active) !important;
+    border-radius: 25px !important;
+    height: 2.4rem !important;
+    font-weight: 300 !important;
+    font-size: 0.9rem !important;
+    align-items: center !important;
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+    background-color: var(--themeBGColor) !important;
+    border-color: var(--themeBGColor) !important;
+}
+.icon-p {
+    padding-left: 0.5rem !important;
+    font-size: 1.2rem !important;
+}
+.edicion {
+    border: none;
+    border-radius: 50%;
+    background-color: #00000000;
+}
+.edicion i {
+    color: var(--iconColor);
+    font-size: 1.2rem;
+    font-weight: 100;
+    cursor: pointer;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    transition: .15s;
+}
+.edicion i:hover {
+    background-color: var(--themeBGColor);
+}
+.edicion i:active {
+    transform: scale(0.8);
+}
+.add i{    
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    line-height: 2.05rem !important;
+}
+

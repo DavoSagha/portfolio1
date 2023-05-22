@@ -1,0 +1,56 @@
+<div class=" container d-flex justify-content-center mt-5" *ngIf="proy">
+    <div class="modal-dialog modal-dialog-centered edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-white">Editar Proyecto</h1>
+            </div>
+            <div class="modal-body">
+                <form class="add-proy" #f="ngForm" (ngSubmit)="Editar()" novalidate>
+                    <label for="nombreProy" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': nombreProy.errors && (nombreProy.dirty || nombreProy.touched)}" id="nombreProy" name="nombreProy" [(ngModel)]="proy.nombrePro" required #nombreProy="ngModel" autocomplete="off">
+                        <div *ngIf="nombreProy.errors?.['required']" class="text-danger">
+                            <p class="m-0">El nombre es obligatorio</p>
+                        </div>
+                    <label for="autor" class="form-label">Autor</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': autor.errors && (autor.dirty || autor.touched)}" id="autor" name="autor" [(ngModel)]="proy.autorPro" required #autor="ngModel" autocomplete="off">
+                        <div *ngIf="autor.errors?.['required']" class="text-danger">
+                            <p class="m-0">La autor es obligatorio</p>
+                        </div>
+                    <label for="urlLiv" class="form-label">URL Live</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': urlLiv.errors && (urlLiv.dirty || urlLiv.touched)}" id="urlLiv" name="urlLiv" [(ngModel)]="proy.urlLive" required #urlLiv="ngModel" autocomplete="off">
+                        <div *ngIf="urlLiv.errors?.['required']" class="text-danger">
+                            <p class="m-0">La URL es obligatoria</p>
+                        </div>
+                    <label for="urlRep" class="form-label">URL Repositorio</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': urlRep.errors && (urlRep.dirty || urlRep.touched)}" id="urlRep" name="urlRep" [(ngModel)]="proy.urlRepo" required #urlRep="ngModel" autocomplete="off">
+                        <div *ngIf="urlRep.errors?.['required']" class="text-danger">
+                            <p class="m-0">La URL es obligatoria</p>
+                        </div>
+                    <label for="descripcionEd" class="form-label">Descripcion</label>
+                    <textarea class="form-control" [class]="{'is-invalid': descripcionEd.errors && (descripcionEd.dirty || descripcionEd.touched)}" id="descripcionEd" name="descripcionEd" cols="50" rows="2" [(ngModel)]="proy.descripcionPro" required #descripcionEd="ngModel" autocomplete="off"></textarea>
+                        <div *ngIf="descripcionEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">La descripcion es obligatoria</p>
+                        </div>
+                    <!-- <div class="image-upload d-sm-flex justify-content-center mt-2 mb-2">
+                        <img [src]="imgService.urlimg" alt="Imagen" id="img" class="mt-2 mb-2"/>
+                        <div class="d-sm-flex mt-1 mb-1 mx-sm-4 labelimg text-sm-start">
+                            <label for="foto">Foto
+                                <span class="btn btn-light w-100">Cambiar</span>
+                            </label>
+                            <input id="foto"name="foto" type="file" accept=".jpg, .png, .jpeg" [(ngModel)]="proy.imgPro" required #foto="ngModel" (change)="subirImg($event)"/>
+                        </div>
+                    </div> -->
+                    <label for="imgProy" class="form-label">URL Imagen</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': imgProy.errors && (imgProy.dirty || imgProy.touched)}" id="imgProy" name="imgProy" [(ngModel)]="proy.imgPro" required #imgProy="ngModel" autocomplete="off">
+                    <div *ngIf="imgProy.errors?.['required']" class="text-danger">
+                        <p class="m-0">La URL es obligatoria</p>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center mt-4">
+                        <button class="btn btn-primary">Aceptar <!--<i class="fa-solid fa-circle-check icon-p"></i>--></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

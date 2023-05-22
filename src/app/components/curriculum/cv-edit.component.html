@@ -1,0 +1,23 @@
+<div class="text-center cvitae">
+    <div class=" container d-flex justify-content-center mt-5" *ngIf="persona">
+        <div class="modal-dialog modal-dialog-centered edit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-white">Editar curriculum</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="add-edu" #f="ngForm" (ngSubmit)="Editar()" novalidate>
+                                <label for="pdf"></label>
+                                <input id="pdf" name="pdf" type="file" accept=".pdf" [(ngModel)]="persona.curriculum" required (change)="subirArch($event)"/>
+                        <div class="modal-footer d-flex justify-content-center mt-4">
+                            <button class="btn btn-primary" [disabled]="!ArvhivoCargado">Aceptar</button>
+                            <div *ngIf="ArvhivoCargado" class="text-danger">
+                                <p class="m-0">Espere que carge el archivo</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

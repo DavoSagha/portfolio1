@@ -1,0 +1,25 @@
+<!-- Perfil -->
+<div class="row m-0 p-0 container-fluid text-white justify-content-center">
+    <div class="col-lg-5 position-relative">
+        <img src={{persona.imgPerfil}} alt="Foto Perfil" class="img-fluid position-absolute translate-middle perfil">
+        <div class="informacion"> 
+            <h1 class="m-0 nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
+            <h3 class="titulo">{{ persona.titulo }}</h3>
+            <div class="social-prof align-items-center justify-content-center">
+                <a class="redes" href="https://github.com/TomiCaratti13" target="_bank"><i class="fa-brands fa-github"></i></a>
+                <a class="redes" href="https://www.linkedin.com/in/tom%C3%A1s-caratti-5b30a8255/" target="_bank"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="redes" (click)="copyUrlToClipboard()"><i class="fa-solid fa-square-share-nodes"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 position-relative">
+        <div class="descripcion align-items-center text-lg-start">
+            <div class=" position-absolute end-0 mt-3 mb-md-4 mx-5">
+                <button class="edicion" routerLink="/persona-edit/1" *ngIf="isLogged"><i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+            <!-- Descripción -->
+                <h2 class="mt-lg-5 mx-md-auto" >Acerca de mí</h2>
+            <p><span>¡Hola!</span> Soy {{ persona.nombre }} {{ persona.apellido }}, {{ persona.descripcion }}</p>
+        </div>
+    </div>
+</div>

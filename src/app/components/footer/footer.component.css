@@ -1,0 +1,7 @@
+/*--- Derechos ---*/
+.derechos p {
+    font-size: 0.85rem;
+}
+.derechos p span {
+    color: var(--themeBGColor);
+}

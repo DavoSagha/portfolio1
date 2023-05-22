@@ -1,0 +1,41 @@
+<div class=" container d-flex justify-content-center mt-5">
+    <div class="modal-dialog modal-dialog-centered add">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-white">Añadir Educacion</h1>
+            </div>
+            <div class="modal-body">
+                <form class="add-edu" #f="ngForm" (ngSubmit)="Crear()" novalidate>
+                    <label for="tituloEd" class="form-label">Título</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': tituloEd.errors && (tituloEd.dirty || tituloEd.touched)}" id="tituloEd" name="tituloEd" [(ngModel)]="tituloEdu" required #tituloEd="ngModel" autocomplete="off">
+                        <div *ngIf="tituloEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">El título es obligatorio</p>
+                        </div>
+                    <label for="instiEd" class="form-label">Institución</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': instiEd.errors && (instiEd.dirty || instiEd.touched)}" id="instiEd" name="instiEd" [(ngModel)]="instiEdu" required #instiEd="ngModel" autocomplete="off">
+                        <div *ngIf="instiEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">La institución es obligatoria</p>
+                        </div>
+                    <label for="fechaEd" class="form-label">Fecha</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': fechaEd.errors && (fechaEd.dirty || fechaEd.touched)}" id="fechaEd" name="fechaEd" [(ngModel)]="fechaEdu" required #fechaEd="ngModel" autocomplete="off">
+                        <div *ngIf="fechaEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">La fecha es obligatoria</p>
+                        </div>
+                    <label for="imgEd" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': imgEd.errors && (imgEd.dirty || imgEd.touched)}" id="imgEd" name="imgEd" [(ngModel)]="imgEdu" required #imgEd="ngModel" autocomplete="off">
+                        <div *ngIf="imgEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">La imagen es obligatoria</p>
+                        </div>
+                    <label for="descripcionEd" class="form-label">Descripcion</label>
+                    <textarea class="form-control" [class]="{'is-invalid': descripcionEd.errors && (descripcionEd.dirty || descripcionEd.touched)}" id="descripcionEd" name="descripcionEd" cols="50" rows="2" [(ngModel)]="descripcionEdu" required #descripcionEd="ngModel" autocomplete="off"></textarea>
+                        <div *ngIf="descripcionEd.errors?.['required']" class="text-danger">
+                            <p class="m-0">La descripcion es obligatoria</p>
+                        </div>
+                    <div class="modal-footer d-flex justify-content-center mt-4">
+                        <button class="btn btn-primary btn-lg">Aceptar <!--<i class="fa-solid fa-circle-check icon-p"></i>--></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

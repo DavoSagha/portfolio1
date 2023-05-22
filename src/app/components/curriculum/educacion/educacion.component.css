@@ -1,0 +1,64 @@
+.colum h3 {
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    border-bottom: 0.1rem solid var(--themeBGColor);
+}
+.colum {
+    padding: 0 1.5rem;
+    margin: 0.5rem;
+}
+.educacion {
+    border-right: 0.2rem solid var(--iconBGColor);
+}
+.item {
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    background-color: var(--iconBGColor);
+}
+.item .editar{
+    margin-top: -0.6rem;
+    margin-right: -0.8rem;
+}
+.item h4 {
+    margin-bottom: 1.3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.item .casa{
+    color: var(--themeBGColor);
+    font-weight: 700;
+    font-size: larger;
+    display: block;
+}
+.item .fecha {
+    color: var(--themeBGColor);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.item p {
+    line-height: 1.5rem;
+}
+.edu{
+    border-right: 0.2rem solid var(--themeBGColor);
+}
+/* .certifi {
+    border: none;
+    border-radius: 50% !important;
+    background-color: var(--BGColor) !important;
+    height: auto !important;
+}
+.certifi i {
+    display: inline-block;
+    width: 1.9rem;
+    height: 1.9rem;
+    text-align: center;
+    line-height: 1.9rem;
+    color: var(--iconColor);
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    transition: .3s;
+}
+.certifi:hover {
+    background-color: var(--themeBGColor);
+} */

@@ -1,0 +1,57 @@
+<!-- SECCIÓN Proyecto -->
+<section id="proyectos" class="proyectos">
+    <div class="row m-0 p-0 container-fluid justify-content-center text-white">
+        <h2 class="text-center">Proyectos
+            <button class="edicion add position-absolute end-0 mx-5" routerLink="/nuevo-proy" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i></button>
+        </h2>
+        <!-- Modo Edicion -->
+        <div class="proyecto" *ngIf="isLogged">
+            <div class="col-lg-5 col-md-5 col-sm-8 tarjeta" *ngFor="let Proyecto of proyect">
+                <div class="tar-head-edit">
+                    <div class="editar d-flex justify-content-end">
+                        <button class="edicion" routerLink="/editar-proy/{{Proyecto.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="edicion" (click)="Borrar(Proyecto.id)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                    <div class="head-img-edit">
+                        <img [src]="Proyecto.imgPro" alt="portafolioweb">
+                    </div>
+                    <div class="head-proy-edit mt-1 mb-3 mx-3">
+                        <h4>{{ Proyecto.nombrePro }}</h4>
+                        <h6>{{ Proyecto.autorPro }}</h6>
+                    </div>
+                    <div class="tar-body-edit">
+                        <p>{{ Proyecto.descripcionPro }}</p>
+                        <div class="repo-live-edit d-flex">
+                            <a [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE DEMO</a>
+                            <a [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-github"></i>REPOSITORIO</a>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modo Vista -->
+        <div class="proyecto" *ngIf="!isLogged">
+            <div class="col-lg-5 col-md-5 col-sm-8 tarjeta mx-4" *ngFor="let Proyecto of proyect">
+                <div class="tar-head">
+                    <div class="head-img">
+                        <img [src]="Proyecto.imgPro" alt="portafolioweb">
+                    </div>
+                    <div class="head-proy">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="proy-titulo">
+                            <h4>{{ Proyecto.nombrePro }}</h4>
+                            <h6>{{ Proyecto.autorPro }}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="tar-body">
+                    <p>{{ Proyecto.descripcionPro }}</p>
+                    <div class="repo-live">
+                        <a [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE DEMO</a>
+                        <a [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-github"></i>REPOSITORIO</a>                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+/* ----- Acerca De ----- */
+.acerca-de {
+    padding: 0 1rem;
+	text-align: center;
+    background-color: var(--headerBGColor);
+}

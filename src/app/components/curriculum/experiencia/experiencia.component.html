@@ -1,0 +1,17 @@
+<div class="m-0 colum experiencia">
+    <h3 class="d-flex justify-content-between">Experiencia
+        <button class="edicion add" routerLink="/nueva-exp" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i></button>
+    </h3>
+    <div class="m-0 p-0" *ngFor="let Experiencia of exp">
+        <div class="item exp">
+            <div class="editar d-flex justify-content-end" *ngIf="isLogged">
+                <button class="edicion" routerLink="/editar-exp/{{Experiencia.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="edicion" (click)="Borrar(Experiencia.id)"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <h4>{{ Experiencia.cargoExp }}</h4>
+            <span class="casa">{{ Experiencia.empresaExp }}</span>
+            <span class="fecha">{{ Experiencia.fechaExp }}</span>
+            <p class="m-0 p-0">{{ Experiencia.descripcionExp }}</p>
+        </div>
+    </div>
+</div>
