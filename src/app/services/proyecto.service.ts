@@ -31,4 +31,11 @@ export class ProyectoService {
   public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.expURL + `borrar/${id}`);
   }
+
+  public uploadImage(id: number, file: File): Observable<string> {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    return this.httpClient.post<string>(`${this.expURL}upload-image/${id}`, formData);
+  }
 }

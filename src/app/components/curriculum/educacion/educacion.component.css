@@ -42,6 +42,22 @@
 .edu{
     border-right: 0.2rem solid var(--themeBGColor);
 }
+
+.edu > a span {
+    transition: transform 0.3s ease-in; /* Transición en el estado normal */
+  }
+  
+  .edu > a:hover span {
+    transition: transform 0.3s ease-in; /* Transición al pasar el mouse */
+    transform: scale(1.05); /* Aumenta el tamaño del elemento */
+  }
+  
+  .edu > a:not(:hover) span {
+    transform: scale(1); /* Restaura el tamaño original del elemento */
+  }
+  
+  
+
 /* .certifi {
     border: none;
     border-radius: 50% !important;

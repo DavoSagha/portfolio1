@@ -39,4 +39,5 @@ export class ImagenesService {
     })
     .catch(error => console.log(error))
   }
+
 }

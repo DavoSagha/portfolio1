@@ -3,42 +3,68 @@
     font-weight: 500;
     border-bottom: 0.1rem solid var(--themeBGColor);
 }
+
 .colum {
     padding: 0 1.5rem;
     margin: 0.5rem;
 }
+
 .experiencia {
     border-left: 0.2rem solid var(--iconBGColor);
 }
+
 .item {
     padding: 1.2rem;
     margin-bottom: 2rem;
     border-radius: 20px;
     background-color: var(--iconBGColor);
 }
-.item .editar{
+
+.item .editar {
     margin-top: -0.6rem;
     margin-right: -0.8rem;
 }
+
 .item h4 {
     margin-bottom: 1.3rem;
     font-weight: 500;
     font-size: 1.4rem;
 }
-.item .casa{
+
+.item .casa {
     color: var(--themeBGColor);
     font-weight: 700;
     font-size: larger;
     display: block;
 }
+
 .item .fecha {
     color: var(--themeBGColor);
     display: block;
     margin-bottom: 0.5rem;
 }
+
 .item p {
     line-height: 1.5rem;
 }
-.exp{
+
+.exp {
     border-left: 0.2rem solid var(--themeBGColor);
+}
+
+.exp>a span {
+    transition: transform 0.3s ease-in;
+    /* Transición en el estado normal */
+}
+
+.exp>a:hover span {
+    transition: transform 0.3s ease-in;
+    /* Transición al pasar el mouse */
+    transform: scale(1.05);
+    /* Aumenta el tamaño del elemento */
+}
+
+.exp>a:not(:hover) span {
+    transform: scale(1);
+    /* Restaura el tamaño original del elemento */
 }

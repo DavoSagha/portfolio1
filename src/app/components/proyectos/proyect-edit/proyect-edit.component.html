@@ -16,11 +16,11 @@
                         <div *ngIf="autor.errors?.['required']" class="text-danger">
                             <p class="m-0">La autor es obligatorio</p>
                         </div>
-                    <label for="urlLiv" class="form-label">URL Live</label>
+                    <!-- <label for="urlLiv" class="form-label">URL Live</label>
                     <input type="text" class="form-control" [class]="{'is-invalid': urlLiv.errors && (urlLiv.dirty || urlLiv.touched)}" id="urlLiv" name="urlLiv" [(ngModel)]="proy.urlLive" required #urlLiv="ngModel" autocomplete="off">
                         <div *ngIf="urlLiv.errors?.['required']" class="text-danger">
                             <p class="m-0">La URL es obligatoria</p>
-                        </div>
+                        </div> -->
                     <label for="urlRep" class="form-label">URL Repositorio</label>
                     <input type="text" class="form-control" [class]="{'is-invalid': urlRep.errors && (urlRep.dirty || urlRep.touched)}" id="urlRep" name="urlRep" [(ngModel)]="proy.urlRepo" required #urlRep="ngModel" autocomplete="off">
                         <div *ngIf="urlRep.errors?.['required']" class="text-danger">
@@ -40,9 +40,10 @@
                             <input id="foto"name="foto" type="file" accept=".jpg, .png, .jpeg" [(ngModel)]="proy.imgPro" required #foto="ngModel" (change)="subirImg($event)"/>
                         </div>
                     </div> -->
-                    <label for="imgProy" class="form-label">URL Imagen</label>
-                    <input type="text" class="form-control" [class]="{'is-invalid': imgProy.errors && (imgProy.dirty || imgProy.touched)}" id="imgProy" name="imgProy" [(ngModel)]="proy.imgPro" required #imgProy="ngModel" autocomplete="off">
-                    <div *ngIf="imgProy.errors?.['required']" class="text-danger">
+                    <label for="imgProy" class="form-label">Imagen</label>
+                    <input type="file" accept=".jpg, .png, .jpeg" class="form-control" id="imgProy" name="imgProy" (change)="onFileSelected($event)" required>
+
+                    <div  class="text-danger">
                         <p class="m-0">La URL es obligatoria</p>
                     </div>
                     <div class="modal-footer d-flex justify-content-center mt-4">

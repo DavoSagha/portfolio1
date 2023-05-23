@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <label for="imgBaner" class="form-label">URL Banner</label>
-                    <input type="file" accept=".jpg, .png, .jpeg" (change)="subirImgB($event)" class="form-control" [class]="{'is-invalid': imgBanner.errors && (imgBanner.dirty || imgBanner.touched)}" id="imgBanner" name="imgBanner" [(ngModel)]="persona.imgBanner" required #imgBanner="ngModel" autocomplete="off">
+                    <input type="file" accept=".jpg, .png, .jpeg" (change)="subirImgB($event)" (change)="onFileChange($event)" class="form-control" id="imgBanner" name="imgBanner" [(ngModel)]="persona.imgBanner" required #imgBanner="ngModel">
                     <div *ngIf="imgBanner.errors?.['required']" class="text-danger">
                         <p class="m-0">La URL es obligatoria</p>
                     </div>

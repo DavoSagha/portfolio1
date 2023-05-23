@@ -21,10 +21,10 @@
                         <div *ngIf="fechaEd.errors?.['required']" class="text-danger">
                             <p class="m-0">La fecha es obligatoria</p>
                         </div>
-                    <label for="imgEd" class="form-label">Imagen</label>
+                    <label for="imgEd" class="form-label">Web instituto</label>
                     <input type="text" class="form-control" [class]="{'is-invalid': imgEd.errors && (imgEd.dirty || imgEd.touched)}" id="imgEd" name="imgEd" [(ngModel)]="edu.imgEdu" required #imgEd="ngModel" autocomplete="off">
                         <div *ngIf="imgEd.errors?.['required']" class="text-danger">
-                            <p class="m-0">La imagen es obligatoria</p>
+                            <!-- <p class="m-0">La imagen es obligatoria</p> -->
                         </div>
                     <label for="descripcionEd" class="form-label">Descripcion</label>
                     <textarea class="form-control" [class]="{'is-invalid': descripcionEd.errors && (descripcionEd.dirty || descripcionEd.touched)}" id="descripcionEd" name="descripcionEd" cols="50" rows="2" [(ngModel)]="edu.descripcionEdu" required #descripcionEd="ngModel" autocomplete="off"></textarea>

@@ -18,17 +18,17 @@
                             <p class="m-0">La institución es obligatoria</p>
                         </div>
                     <label for="fechaEd" class="form-label">URL Live</label>
-                    <input type="text" class="form-control" [class]="{'is-invalid': fechaEd.errors && (fechaEd.dirty || fechaEd.touched)}" id="fechaEd" name="fechaEd" [(ngModel)]="urlLive" required #fechaEd="ngModel" autocomplete="off">
+                    <input type="text" class="form-control" [class]="{'is-invalid': fechaEd.errors && (fechaEd.dirty || fechaEd.touched)}" id="fechaEd" name="fechaEd" [(ngModel)]="urlLive" #fechaEd="ngModel" autocomplete="off">
                         <div *ngIf="fechaEd.errors?.['required']" class="text-danger">
-                            <p class="m-0">La fecha es obligatoria</p>
+                            <!-- <p class="m-0">La fecha es obligatoria</p> -->
                         </div>
                     <label for="fechaEd" class="form-label">URL Repositorio</label>
-                    <input type="text" class="form-control" [class]="{'is-invalid': fechaEd.errors && (fechaEd.dirty || fechaEd.touched)}" id="fechaEd" name="fechaEd" [(ngModel)]="urlRepo" required #fechaEd="ngModel" autocomplete="off">
+                    <input type="text" class="form-control" [class]="{'is-invalid': fechaEd.errors && (fechaEd.dirty || fechaEd.touched)}" id="fechaEd" name="fechaEd" [(ngModel)]="urlRepo" #fechaEd="ngModel" autocomplete="off">
                         <div *ngIf="fechaEd.errors?.['required']" class="text-danger">
-                            <p class="m-0">La fecha es obligatoria</p>
+                           <!--  <p class="m-0">La fecha es obligatoria</p> -->
                         </div>
                     <label for="descripcionEd" class="form-label">Descripcion</label>
-                    <textarea class="form-control" [class]="{'is-invalid': descripcionEd.errors && (descripcionEd.dirty || descripcionEd.touched)}" id="descripcionEd" name="descripcionEd" cols="50" rows="2" [(ngModel)]="descripcionPro" required #descripcionEd="ngModel" autocomplete="off"></textarea>
+                    <textarea class="form-control" [class]="{'is-invalid': descripcionEd.errors && (descripcionEd.dirty || descripcionEd.touched)}" id="descripcionEd" name="descripcionEd" cols="50" rows="2" [(ngModel)]="descripcionPro" #descripcionEd="ngModel" autocomplete="off"></textarea>
                         <div *ngIf="descripcionEd.errors?.['required']" class="text-danger">
                             <p class="m-0">La descripcion es obligatoria</p>
                         </div>
@@ -42,9 +42,9 @@
                         </div>
                     </div> -->
                     <label for="imgProy" class="form-label">URL Imagen</label>
-                    <input type="text" class="form-control" [class]="{'is-invalid': imgProy.errors && (imgProy.dirty || imgProy.touched)}" id="imgProy" name="imgProy" [(ngModel)]="imgPro" required #imgProy="ngModel" autocomplete="off">
+                    <input type="file" accept=".jpg, .png, .jpeg" (change)="onFileChange($event)" class="form-control" [class]="{'is-invalid': imgProy.errors && (imgProy.dirty || imgProy.touched)}" id="imgProy" name="imgProy" [(ngModel)]="imgPro" #imgProy="ngModel" autocomplete="off">
                     <div *ngIf="imgProy.errors?.['required']" class="text-danger">
-                        <p class="m-0">La URL es obligatoria</p>
+                        <!-- <p class="m-0">La URL es obligatoria</p> -->
                     </div>
                     <div class="modal-footer d-flex justify-content-center mt-4">
                         <button class="btn btn-primary btn-lg">Aceptar <!--<i class="fa-solid fa-circle-check icon-p"></i>--></button>

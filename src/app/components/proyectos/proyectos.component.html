@@ -5,7 +5,7 @@
             <button class="edicion add position-absolute end-0 mx-5" routerLink="/nuevo-proy" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i></button>
         </h2>
         <!-- Modo Edicion -->
-        <div class="proyecto" *ngIf="isLogged">
+        <div class="proyecto margin-banner" *ngIf="isLogged">
             <div class="col-lg-5 col-md-5 col-sm-8 tarjeta" *ngFor="let Proyecto of proyect">
                 <div class="tar-head-edit">
                     <div class="editar d-flex justify-content-end">
@@ -22,8 +22,8 @@
                     <div class="tar-body-edit">
                         <p>{{ Proyecto.descripcionPro }}</p>
                         <div class="repo-live-edit d-flex">
-                            <a [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE DEMO</a>
-                            <a [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-github"></i>REPOSITORIO</a>                                
+                            <a *ngIf="Proyecto.urlLive" [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE</a>
+                            <a *ngIf="Proyecto.urlRepo" [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-github"></i>REPOSITORIO</a>                                
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
         <div class="proyecto" *ngIf="!isLogged">
             <div class="col-lg-5 col-md-5 col-sm-8 tarjeta mx-4" *ngFor="let Proyecto of proyect">
                 <div class="tar-head">
-                    <div class="head-img">
+                    <div class="head-img" *ngIf="Proyecto.imgPro">
                         <img [src]="Proyecto.imgPro" alt="portafolioweb">
                     </div>
                     <div class="head-proy">
@@ -47,8 +47,8 @@
                 <div class="tar-body">
                     <p>{{ Proyecto.descripcionPro }}</p>
                     <div class="repo-live">
-                        <a [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE DEMO</a>
-                        <a [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-github"></i>REPOSITORIO</a>                                
+                        <a *ngIf="Proyecto.urlLive" [href]="Proyecto.urlLive" target="_bank"><i class="fa-solid fa-up-right-from-square"></i>LIVE</a>
+                        <a *ngIf="Proyecto.urlRepo" [href]="Proyecto.urlRepo" target="_bank"><i class="fa-brands fa-desktop"></i>REPOSITORIO</a>                                
                     </div>
                 </div>
             </div>

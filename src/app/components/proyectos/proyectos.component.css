@@ -21,7 +21,23 @@ h2 {
 .proyecto .tarjeta {
     margin: 0.5rem;
     transition: all .3s;
+    width: 20rem; /* Ajusta el ancho de la tarjeta según tus necesidades */
+    height: 22rem; /* Ajusta la altura de la tarjeta según tus necesidades */
 }
+
+/* @media (max-width: 768px) {
+    .proyecto .tarjeta {
+        width: 100%;  En pantallas más pequeñas, ocupar el ancho completo 
+        height: auto;  Ajustar la altura automáticamente 
+    }
+} */
+@media (max-width: 480px) {
+    .proyecto .tarjeta {
+        width: 100%; /* Ocupar el ancho completo en dispositivos móviles */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+}
+
 .proyecto .tarjeta:hover {
     z-index: 15;
 }
@@ -75,7 +91,11 @@ h2 {
     padding: 0;
     margin-bottom: 0.2rem;
     font-weight: 500;
+    overflow: hidden; /* Oculta el exceso de contenido */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) cuando el texto se desborda */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
+
 .proyecto .tarjeta .tar-head .head-proy h6 {
     padding: 0;
     margin: 0;
@@ -131,7 +151,20 @@ h2 {
     background-color: var(--iconBGColor);
 }
 
+.proyecto .tarjeta .tar-head .head-proy h4 {
+    padding: 0;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+    overflow: hidden; /* Oculta el exceso de contenido */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) cuando el texto se desborda */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
 /* --- Proyectos Modo Edicion--- */
+.margin-banner {
+    margin-bottom: 6rem;
+}
+
 .proyecto .tarjeta .tar-head-edit {
     width: 100%;
     padding: 0.5rem;
@@ -157,6 +190,7 @@ h2 {
     padding: 0;
     margin-bottom: 0.2rem;
     font-weight: 500;
+    
 }
 .proyecto .tarjeta .tar-head-edit .head-proy-edit h6 {
     padding: 0;

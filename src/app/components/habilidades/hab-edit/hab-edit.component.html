@@ -12,10 +12,17 @@
                         <p class="m-0">El nombre es obligatorio</p>
                     </div>
                     <label for="icono" class="form-label">Icono</label>
-                    <input type="text" class="form-control" [class]="{'is-invalid': icono.errors && (icono.dirty || icono.touched)}" id="icono" name="icono" [(ngModel)]="hab.iconoHys" required #icono="ngModel" autocomplete="off">
-                    <div *ngIf="icono.errors?.['required']" class="text-danger">
-                        <p class="m-0">El icono es obligatorio</p>
+                    <div class="icon-container">
+                      <input type="text" class="form-control" [class]="{'is-invalid': icono.errors && (icono.dirty || icono.touched)}" id="icono" name="icono" [(ngModel)]="hab.iconoHys" required #icono="ngModel" autocomplete="off">
+                      <a style="text-decoration: none; color: #02967d;" href="https://icons.getbootstrap.com/" target="_blank" class="readme-icon">
+                        <i class="bi bi-question-circle-fill"></i>
+                      </a>
                     </div>
+                    
+                    <div *ngIf="icono.errors?.['required']" class="text-danger">
+                      <p class="m-0">El icono es obligatorio</p>
+                    </div>
+                    
                     <label for="porcenHab" class="form-label">Porcentaje</label>
                     <input type="text" class="form-control" [class]="{'is-invalid': porcenHab.errors && (porcenHab.dirty || porcenHab.touched)}" id="porcenHab" name="porcenHab" [(ngModel)]="hab.porcentaje" required #porcenHab="ngModel" autocomplete="off">
                     <div *ngIf="porcenHab.errors?.['required']" class="text-danger">

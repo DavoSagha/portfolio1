@@ -9,3 +9,50 @@
     margin: 0.2rem 0 !important;
     font-weight: 600 !important;
 }
+
+
+
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .readme-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #02967d;
+  }
+  
+  .readme-icon i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .readme-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: beige;
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .readme-icon a {
+    color: #02967d; /* Color original */
+  }
+  
+/*   .readme-icon:hover + .readme-text {
+    display: block;
+  } */
+  
+  
