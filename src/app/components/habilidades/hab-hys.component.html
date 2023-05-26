@@ -7,14 +7,14 @@
         <div class="col-lg-4 col-md-8 col-sm-10 habilidad" *ngFor="let Habilidad of hab; let i = index">
             <div class="hab">
                 <div *ngIf="isLogged" class=" d-flex justify-content-between">
-                    <span class="d-flex"><h5>{{ Habilidad.nombreHys }}</h5><i [class]="Habilidad.iconoHys" class="mx-2"></i></span>
+                    <span class="d-flex"><h5>{{ Habilidad.nombreHys }}</h5><i class="{{Habilidad.iconoHys}}" class="mx-2"></i></span>
                     <div class="editar d-flex">
                         <button class="edicion" routerLink="editar-hab/{{Habilidad.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button class="edicion" (click)="Borrar(Habilidad.id)"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
                 </div>
                 <div *ngIf="!isLogged">
-                    <span class="d-flex justify-content-between"><h5>{{ Habilidad.nombreHys }}</h5><i [class]="Habilidad.iconoHys"></i></span>
+                    <span class="d-flex justify-content-between"><h5>{{ Habilidad.nombreHys }}</h5><i class="{{Habilidad.iconoHys}}"></i></span>
                 </div>
                 <br>
                 <div>
