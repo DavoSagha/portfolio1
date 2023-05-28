@@ -1,0 +1,75 @@
+
+.contacto{
+    margin: 2rem;
+}
+.contacto h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-top: 3.5rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 0.1rem solid #FFB6AD;
+}
+
+.contenedor-form .form .form-header .form-title span {
+    color: #FFB6AD; /* Cambio de color violeta */
+}
+
+.contenedor-form .form {
+    background: rgba(0, 0, 0, 0.7);
+    width: 55%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 3rem;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+
+.contenedor-form .form .form-label {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-family: Roboto;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.contenedor-form .form .form-input,
+.form-textarea {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #FFB6AD;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+.contenedor-form .form .form-textarea {
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+}
+
+.contenedor-form .form .btn-submit {
+    width: 100%;
+    font-family: Roboto;
+    outline: none;
+    background: #FFB6AD; /* Cambio de color violeta */
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: var(--blanco);
+    padding: 15px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.contenedor-form .form .btn-submit:hover {
+    background: #b48680; /* Cambio de color de hover */
+}
+

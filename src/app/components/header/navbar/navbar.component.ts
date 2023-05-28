@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,8 +14,9 @@ export class NavbarComponent implements OnInit{
   isNavbarCollapsed = true;
   activePage: string = '';
   Inicio: boolean = true;
+  persona: Persona = { nombre: '', apellido: '', titulo: '', descripcion: '', imgBanner: '', imgPerfil: '', curriculum: '',mail:''};
 
-  constructor(private router:Router, private tokenService: TokenService) {}
+  constructor(private router:Router,public personaService: PersonaService, private tokenService: TokenService) {}
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -31,4 +34,9 @@ export class NavbarComponent implements OnInit{
     this.router.navigate(['/ingreso'])
   }
 
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data => {
+      this.persona = data
+    });
+  }
 }

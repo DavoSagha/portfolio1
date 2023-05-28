@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./persona.component.css']
 })
 export class PersonaComponent implements OnInit{
-  persona: Persona = { nombre: '', apellido: '', titulo: '', descripcion: '', imgBanner: '', imgPerfil: '', curriculum: ''};
+  persona: Persona = { nombre: '', apellido: '', titulo: '', descripcion: '', imgBanner: '', imgPerfil: '', curriculum: '',mail:''};
   isLogged = false;
 
   constructor(public personaService: PersonaService, private tokenService: TokenService, private renderer: Renderer2){}

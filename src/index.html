@@ -14,7 +14,58 @@
     <!-- Bootstrap -->
   </head>
   <body scrollSpy>
+     
     <app-root></app-root>
     
+    <section id="container-contacto" class="contacto">
+        
+      <div class="contenedor-form row m-0 p-0 container-fluid justify-content-center text-white">
+        <h2 class="text-center">Contacto</h2>
+        <form action="https://formsubmit.co/{{persona.mail}}" method="post" class="form">
+          
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-input"
+            id="nombre"
+            placeholder="Escriba su nombre"
+            name="name"
+          />
+
+          <label for="email" class="form-label">Correo</label>
+          <input
+            type="email"
+            class="form-input"
+            id="email"
+            placeholder="Escriba su mail"
+            name="email"
+          />
+
+          <label for="asunto" class="form-label">Asunto</label>
+          <input
+            type="text"
+            class="form-input"
+            name="subjet"
+            id="asunto"
+            placeholder="Escriba el asunto"
+          />
+
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea
+            name="messaje"
+            id="mensaje"
+            class="form-textarea"
+            placeholder="Escriba su mensaje"
+            name="comments"
+          ></textarea>
+
+          <input type="submit" class="btn-submit" target="_blank" rel="noopener noreferrer" value="Enviar Consulta"/>
+        </form>
+      </div>
+    </section>
+    <!-- footer -->
+<div class="container-fluid bg-black derechos m-0 p-0">
+  <p class="text-white text-center m-0 py-2"><i><span>&copy;</span>&nbsp;DSM  <span>Store</span></i></p>
+</div>
   </body>
 </html>

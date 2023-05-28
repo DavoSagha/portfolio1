@@ -39,6 +39,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 import { EduEditComponent } from './components/curriculum/educacion/edu-edit/edu-edit.component';
 import { CVEditComponent } from './components/curriculum/cv-edit.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { MailEditComponent } from './components/contacto/mail-edit/mail-edit.component';
 
 
 @NgModule({
@@ -66,7 +68,9 @@ import { CVEditComponent } from './components/curriculum/cv-edit.component';
     ProyectAddComponent,
     ProyectEditComponent,
     EduEditComponent,
-    CVEditComponent
+    CVEditComponent,
+    ContactoComponent,
+    MailEditComponent
   ],
   imports: [
     BrowserModule,

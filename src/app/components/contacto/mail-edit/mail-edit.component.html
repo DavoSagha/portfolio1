@@ -1,0 +1,22 @@
+
+<div class=" container d-flex justify-content-center mt-5" *ngIf="persona">
+    <div class="modal-dialog modal-dialog-centered edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-white">Editar Mail</h1>
+            </div>
+            <div class="modal-body">
+                <form class="add-edu" #f="ngForm" (ngSubmit)="Editar()" novalidate>
+                    <label for="mail" class="form-label">Mail</label>
+                    <input type="text" class="form-control" [class]="{'is-invalid': nombre.errors && (nombre.dirty || nombre.touched)}" id="mail" name="mail" [(ngModel)]="persona.mail" required #nombre="ngModel" placeholder="Ej: exemple@exemple.com" autocomplete="off">
+                        <div *ngIf="nombre.errors?.['required']" class="text-danger">
+                            <!-- <p class="m-0">El mail es obligatorio</p> -->
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center mt-4">
+                            <button class="btn btn-primary" [disabled]="!f.form.valid">Aceptar <!--<i class="fa-solid fa-circle-check icon-p"></i>--></button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,7 @@ import { HabEditComponent } from './components/habilidades/hab-edit/hab-edit.com
 import { ProyectAddComponent } from './components/proyectos/proyect-add/proyect-add.component';
 import { ProyectEditComponent } from './components/proyectos/proyect-edit/proyect-edit.component';
 import { CVEditComponent } from './components/curriculum/cv-edit.component';
+import { MailEditComponent } from './components/contacto/mail-edit/mail-edit.component';
 
 const routes: Routes = [
   {path: 'ingreso', component: LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'editar-exp/:id', component: ExpEditComponent},
   {path: 'editar-edu/:id', component: EduEditComponent}, 
   {path: 'editar-hab/:id', component: HabEditComponent}, 
-  {path: 'editar-proy/:id', component: ProyectEditComponent}
+  {path: 'editar-proy/:id', component: ProyectEditComponent},
+  {path: 'mail-edit/:id', component: MailEditComponent}
 ];
 
 @NgModule({
